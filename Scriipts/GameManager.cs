@@ -13,21 +13,38 @@ public class GameManager : MonoBehaviour
     private float spawnRate = 1.0f;
 
     private int score;
+    private int scoreMax;
+
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreMaxText;
     public TextMeshProUGUI gameOverText;
+
     public Button restartButton;
+
     public GameObject titleScreen;
 
     public bool isGameActive;
 
     void Start()
     {
+        scoreMax = PlayerPrefs.GetInt("score");
+        if(PlayerPrefs.GetInt("score") > PlayerPrefs.GetInt("scoreMax"))
+        {
+            PlayerPrefs.SetInt("scoreMax", scoreMax);
+        }
 
-    }
+        //Debug.Log(PlayerPrefs.GetInt("score"));
+    }   
 
-    void Update()
+    void Update()    {    }
+
+    public void UpdateScore(int scoreToAdd)
     {
-        
+        score += scoreToAdd;
+        scoreText.text = "        : " + score;
+        scoreMaxText.text = "record: " + PlayerPrefs.GetInt("scoreMax");
+
+        PlayerPrefs.SetInt("score", score);
     }
     IEnumerator SpawnTarget()
     {
@@ -37,12 +54,6 @@ public class GameManager : MonoBehaviour
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
         }
-    }
-
-    public void UpdateScore(int scoreToAdd)
-    {
-        score += scoreToAdd;
-        scoreText.text = "Score : " + score;
     }
 
     public void GameOver()

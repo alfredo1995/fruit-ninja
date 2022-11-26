@@ -5,6 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     private GameManager gameManager;
+    public CameraAnitation camAnimator;
 
     private Rigidbody targetRb;
 
@@ -20,6 +21,7 @@ public class Target : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        camAnimator = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraAnitation>();
 
         targetRb = GetComponent<Rigidbody>();
         targetRb.AddForce(RandomForce(), ForceMode.Impulse);
@@ -27,15 +29,15 @@ public class Target : MonoBehaviour
         transform.position = RandomSpawnPos();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnMouseDown()
     {
         if (gameManager.isGameActive)
         {
+            if (gameObject.CompareTag("Bad"))
+            {
+                camAnimator.ScreenShake();
+
+            }
             Destroy(gameObject);
             Instantiate(explosionParticle, transform.position, transform.rotation);
             gameManager.UpdateScore(pointValue);
@@ -45,9 +47,10 @@ public class Target : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        if (!gameObject.CompareTag("Bad"))
+        if (!gameObject.CompareTag("Bad"))  
         {
             gameManager.GameOver();
+
         }
     }
 
@@ -65,6 +68,8 @@ public class Target : MonoBehaviour
     {
         return new Vector3(Random.Range(-xRange, xRange), ySpawRange);
     }
+
+
 
 
 }
