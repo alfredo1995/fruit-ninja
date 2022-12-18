@@ -41,6 +41,7 @@ Esse projeto inclui todos esses fundamentos:
 Definindo a dificuldade do jogo atraves da velocidade com que os alvos são lançados
 
 	Ui de Menu de opções de dificuldade (easy, medium e hard);
+	
 	Configuração easy faz com que os objetos sejam lançados lentamente;
 	Configuração hard faz com que os objetos sejam lançados rapidamente;
 	Qunado o EventListener do botão for chamado vai executar o metodo SetDifficult;
