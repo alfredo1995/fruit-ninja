@@ -16,22 +16,26 @@ Esse projeto inclui todos esses fundamentos:
 
        O giro ou Torque aplicados serão randomizados de modo que alguns objetos girem.
 
-    Os objetos serão destruido atraves da entrada do input do mouse
-    OnMouseEnter() para saber quando o mouse entra em uma área
+       Os objetos serão destruido atraves da entrada do input do mouse
+       
+       OnMouseEnter() para saber quando o mouse entra em uma área
 
-    OnMouseDown() para dizer quando o mouse foi precionado para baixo
+       OnMouseDown() para dizer quando o mouse foi precionado para baixo
 
-    OnMouseUp() para dizer quando o mouse foi liberado
+       OnMouseUp() para dizer quando o mouse foi liberado
 
-    OnDestroy() Detectar se o usuario clicou no objeto para nos o destruimos
+       OnDestroy() Detectar se o usuario clicou no objeto para nos o destruimos
 
-    Canvas representando a exibição da tela
+       Canvas representando a exibição da tela
 
-    exibir a pontuação;
-texto de game over;
-Sistema de particulas;
-botão restart, escrevendo um metodo chamado RestatGame() que vai recarregar a cena,
-atraves de um EventListener que será acionado ao clicar no botão;
+       exibir a pontuação;
+       
+	texto de game over;
+	
+	Sistema de particulas;
+	
+	botão restart, escrevendo um metodo chamado RestatGame() que vai recarregar a cena,
+	atraves de um EventListener que será acionado ao clicar no botão;
 
 Definindo a dificuldade do jogo atraves da velocidade com que os alvos são lançados
 
