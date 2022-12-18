@@ -41,11 +41,12 @@ Esse projeto inclui todos esses fundamentos:
 Definindo a dificuldade do jogo atraves da velocidade com que os alvos são lançados
 
 	Ui de Menu de opções de dificuldade (easy, medium e hard);
-Configuração easy faz com que os objetos sejam lançados lentamente;
-Configuração hard faz com que os objetos sejam lançados rapidamente;
-Qunado o EventListener do botão for chamado vai executar o metodo SetDifficult;
-O metodo SetDifficult tomará o valor da difuldade e comunicar para o script GameManager,
-responsavel por gerenciar a cena.
+	Configuração easy faz com que os objetos sejam lançados lentamente;
+	Configuração hard faz com que os objetos sejam lançados rapidamente;
+	Qunado o EventListener do botão for chamado vai executar o metodo SetDifficult;
+	O metodo SetDifficult tomará o valor da difuldade e comunicar para o script GameManager,
+	responsavel por gerenciar a cena.
+
 	No script GameManager tera o metoodo StartGame será tomado esse valor de dificuldade e
 	usado para alterar o spawRate(Lançamento dos Alvos)
 	usando conceito de Ui Diegetic aplicando a animação "SCREEN SHAKE" 
