@@ -30,12 +30,13 @@ Esse projeto inclui todos esses fundamentos:
 
        exibir a pontuação;
        
-	texto de game over;
+       texto de game over;
 	
-	Sistema de particulas;
+       Sistema de particulas;
 	
-	botão restart, escrevendo um metodo chamado RestatGame() que vai recarregar a cena,
-	atraves de um EventListener que será acionado ao clicar no botão;
+       botão restart, escrevendo um metodo chamado RestatGame() que vai recarregar a cena,
+       
+       atraves de um EventListener que será acionado ao clicar no botão;
 
 Definindo a dificuldade do jogo atraves da velocidade com que os alvos são lançados
 
