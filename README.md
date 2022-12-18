@@ -8,7 +8,7 @@ Esse projeto inclui todos esses elementos de UI:
 
 Esse projeto inclui todos esses fundamentos:
 
-    Usar Random.Range
+       Usei Random.Range
 
        Acessar a Position que será Randomizada para que os objetos apareçam em qualquer lugar.
 
