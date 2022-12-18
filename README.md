@@ -88,7 +88,7 @@ Jogue objetos aleatoriamente no ar
 Substitua o código confuso por novos métodos
 
     1. Declare e inicialize novas variáveis flutuantes privadas para minSpeed, maxSpeed, maxTorque, xRange eySpawnPos;
-2.Crie uma nova função para Vector3 RandomForce() e chame-a em Start()
+    2.Crie uma nova função para Vector3 RandomForce() e chame-a em Start()
     3.Crie uma nova função para float RandomTorque() e chame-a em Start()
     4.Crie uma nova função para RandomSpawnPos(), faça com que ele retorne um novo Vector3e chame-o em Start() 
 
@@ -111,7 +111,7 @@ Crie uma co-rotina para gerar objetos
 Destrua o alvo com clique e sensor do Mouse
 
     1. Em Target.cs, adicione um novo método parao vazio privado OnMouseDown() { }
-e, dentro desse método, destrua o gameObject
+    e, dentro desse método, destrua o gameObject
     2. Adicione um novo método para o vazio privado OnTriggerEnter(Collider other) e, dentro dessa função, destrua o gameObject
 
 <br> 
@@ -141,7 +141,7 @@ Inicialize o texto e a variável da pontuação
     1. Na parte superior doGameManager.cs, adicione "usando TMPro; "
     2. Declare um novoscoreText TextMeshProUGUI público e, em seguida, atribua essa variável no inspetor
     3. Crie uma nova variável de pontuação int privadae inicialize-a emStart()asscore = 0;
-4.Também emStart(), definascoreText.text = "Score: " + score;
+    4.Também emStart(), definascoreText.text = "Score: " + score;
 
 
 Criar um novo método UpdateScore
@@ -149,7 +149,7 @@ Criar um novo método UpdateScore
     1. Criar um novo método UpdateScore vazio privadoque exija umparâmetro int scoreToAdd
     2. Recortar e colarscoreText.text = "Score: " + score; no novo método e, em seguida, chameUpdateScore(0)emStart()
     3.Em UpdateScore(), incremente a pontuação adicionandoscore += scoreToAdd;
-4.Chame UpdateScore(5) na função spawnTarget()
+    4.Chame UpdateScore(5) na função spawnTarget()
 
 
 Adicione pontuação quando os alvos forem destruídos referenciando os scripts
@@ -205,14 +205,15 @@ Criar função GameOver
 Pare de desovar e marque no GameOver
 
     1. Criar um novobool público isGameActive;
-2.Como aprimeira linhaemStart(), definaisGameActive = true; e emGameOver(), definaisGameActive = false;
-3.Para evitar a desova, na co-rotina SpawnTarget(), altere while (true) towhile(isGameActive)
+    2.Como aprimeira linhaemStart(), definaisGameActive = true; e emGameOver(), definaisGameActive = false;
+    3.Para evitar a desova, na co-rotina SpawnTarget(), altere while (true) towhile(isGameActive)
     4.Para evitar pontuação, em Target.cs, na função OnMouseDown(), adicione a condiçãoif (gameManager.isGameActive) {
 
 
     Adicione um botão Reiniciar
 
-    1.Clique com o botão direito do mouse noCanvaseCriar > interface do usuário > BotãoNota: Você também pode usarButton - TextMeshPropara obter mais controle sobre o texto do botão.
+    1.Clique com o botão direito do mouse noCanvaseCriar > interface do usuário > BotãoNota: Você também pode 
+    usarButton - TextMeshPropara obter mais controle sobre o texto do botão.
     2. Renomeie o botão "Botão Iniciar"
     3. Reative temporariamente o texto do Game Over para reposicionar o Botão Reiniciar bem com o texto e, em seguida, desative-o novamente
     4. Selecione o objeto filho Texto e, em seguida, edite seu Texto para dizer "Reiniciar", sua Fonte, Estilo e Tamanho
@@ -220,14 +221,14 @@ Pare de desovar e marque no GameOver
 Faça o botão de reiniciar funcionar
 
     1. No GameManager.cs, adicioneusando UnityEngine.SceneManagement;
-2.Criar uma nova função pública void RestartGame()que recarrega a cena atual
+    2.Criar uma nova função pública void RestartGame()que recarrega a cena atual
     3. No inspetor do botão, clique em + para adicionar um novoevento On Click, arraste-o no objeto Game Managere selecione afunção GameManager.RestartGame
 
 
 Mostrar botão de reinicialização no game over
 
     1. Na parte superior do GameManager.cs adicionarusando UnityEngine.UI;
-2.Declare um novoButton restartButton público; e atribua obotão Reiniciara ele no inspetor
+    2.Declare um novoButton restartButton público; e atribua obotão Reiniciara ele no inspetor
     3. Desmarquea caixa de seleção "Ativo" dobotão Reiniciarno inspetor
     4. Na função GameOver, ative obotão Reiniciar
 
@@ -257,7 +258,7 @@ Adicionar um script DifficultyButton
 Call SetDifficulty no botão clique
 
     1. Crie uma nova função SetDifficulty voide, dentro dela, Debug.Log(gameObject.name + " foi clicado");
-2.Adicione oouvinte de botãopara chamar afunção SetDifficulty
+    2.Adicione oouvinte de botãopara chamar afunção SetDifficulty
 
 
 Faça seus botões iniciarem o jogo
@@ -280,7 +281,7 @@ Use um parâmetro para alterar a dificuldade
        atribua a dificuldade Easy como 1, Medium como 2 eHardas 3
     2. Adicionar um parâmetro de dificuldade intà função StartGame()
     3.Em StartGame(), definaspawnRate /= dificuldade;
-4.Corrija o erro em DifficultyButton.cs passando o parâmetro de dificuldade paraStartGame(difficulty)
+    4.Corrija o erro em DifficultyButton.cs passando o parâmetro de dificuldade paraStartGame(difficulty)
 
 
 
@@ -295,24 +296,24 @@ Use um parâmetro para alterar a dificuldade
 
 1° Criar um Canva de Text para Pontuacao Maxima
 
-      Create > UI > TEXT MESH PRO
+       Create > UI > TEXT MESH PRO
 
 2° Duas variaves, 1 para armazena a contagem maxima e a outra para referenciar o canva text   
 
 
-      private int scoreMax;
+       private int scoreMax;
 
-public TextMeshProUGUI scoreMaxText;
+       public TextMeshProUGUI scoreMaxText;
 
 3° metodo start: atribuir a variavel de contagem da pontuacao maxima o valor recebido na variavel score
         
 	//criar um condicao para que mostre a pontuacao maxima se o score for maior que o valor na scoreMax
 
         scoreMax = PlayerPrefs.GetInt("score");
-if (PlayerPrefs.GetInt("score") > PlayerPrefs.GetInt("scoreMax"))
-{
-    PlayerPrefs.SetInt("scoreMax", scoreMax);
-}
+        if (PlayerPrefs.GetInt("score") > PlayerPrefs.GetInt("scoreMax"))
+        {
+               PlayerPrefs.SetInt("scoreMax", scoreMax);
+        }
 
 4° metodo UpdateScore passar a variavel refenciando o carva text(scoreMaxText)
 
@@ -333,7 +334,7 @@ Diegético
 	As interfaces de usuário diegéticas existem no mundo do jogo em vez de estarem em cima dele e / ou completamente removidas da ficção do jogo.
 	Interfaces de usuário diegéticas dentro do mundo do jogo podem ser vistas e ouvidas por outros jogadores. Alguns exemplos de 
 
-    interface do usuário diegética incluem as telas em computadores, relógios de tique-taque, munição restante e contagens regressivas. 
+        interface do usuário diegética incluem as telas em computadores, relógios de tique-taque, munição restante e contagens regressivas. 
 	
 Não-diegético
 
@@ -397,7 +398,7 @@ Meta
 
 
     public class CameraAnitation : MonoBehaviour
-{
+    {
     public Animator camAnimator;
 
     public void Start()
@@ -408,29 +409,29 @@ Meta
     {
         camAnimator.SetTrigger("Shake");
     }
-}
+    }
 
 9° acessar o script Tagert responsavel por destruir a bomba e faça a referencia
 
-        public CameraAnitation camAnimator;
+	public CameraAnitation camAnimator;
 
-void Start()
-{
-    camAnimator = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraAnitation>();
-}
+	void Start()
+	{
+	    camAnimator = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraAnitation>();
+	}
 
-private void OnMouseDown()
-{
-    if (gameManager.isGameActive)
-    {
-        if (gameObject.CompareTag("Bad"))
-        {
-            camAnimator.ScreenShake();
-        }
+	private void OnMouseDown()
+	{
+	    if (gameManager.isGameActive)
+	    {
+		if (gameObject.CompareTag("Bad"))
+		{
+		    camAnimator.ScreenShake();
+		}
 
-        Destroy(gameObject);
-    }
-}
+		Destroy(gameObject);
+	    }
+	}
 
 
 
