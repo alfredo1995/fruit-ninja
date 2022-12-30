@@ -285,8 +285,8 @@ Use um parâmetro para alterar a dificuldade
 
 
 
-< br >
-< br >
+<br> 
+<br> 
 
 --------------------------------------------------Salvando a pontuação do jogo -------------------------------------------------- 
 
