@@ -324,6 +324,7 @@ Use um parâmetro para alterar a dificuldade
 	PlayerPrefs.SetInt("score", score);
 
 
+<br> <br> 
 
 --------------------------------------------------Aplicando Conceito UI DIEGETIC -------------------------------------------------- 
 
@@ -357,6 +358,7 @@ Meta
 	Quando eles são baleados ou se envolvem em combate, sua máscara também recebe dano. 
 
 <br>
+<br> 
 
 1° Alterar o texto Score por uma imagem
 
