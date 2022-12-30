@@ -360,6 +360,9 @@ Meta
 <br>
 <br> 
 
+-------------------------------------------------- Alterando o texto Score por uma Imagem -------------------------------------------------- 
+
+
 1° Alterar o texto Score por uma imagem
 
 	create > ui imagem > apague o texto Score e posicione a imagem no lugar
@@ -367,35 +370,40 @@ Meta
 2° Importe um imagem e defina a propriedade dela como > Texture Type > sprite (2D and UI)
 
 	selecione o carva ui imagem > souce Image > arraste a textura da imagem importada
+	
+	
+	
+-------------------------------------------------- Screen Shake Animation ------------------------------------------------- 
 
-3° Fazer com que a tela trema ao clicar na bomba "screen shake"
+
+1° Fazer com que a tela trema ao clicar na bomba "screen shake"
 
 	Adicionar um componente animator na camera e em seguida > windows > animation > abrir
 
-4° Windowns > Animation > Create new clip > dar o nome ao arquivo e salva (cameraAnimationIdle)
+2° Windowns > Animation > Create new clip > dar o nome ao arquivo e salva (cameraAnimationIdle)
 
 	Clicar no botao vermelho(enable/display keyframe recording modo) em seguida
         na posição da camera altera x = 1.  Depois volte o x para 0
 
-5° Create new clip > dar o nome ao arquivo e salva (CameraAnimationScreeenShake)
+3° Create new clip > dar o nome ao arquivo e salva (CameraAnimationScreeenShake)
 
 	Clicar no botao vermelho(enable/display keyframe recording modo) em seguida
         na posição da camera altera x = -0.1 Depois clique em um frame para frente e volte para 0
         clique no frame seguinte e altera x = 0.1 Depois clique em um frame para frente e volte para 0
 	
-6° Windowns > Animation > Animator (fazer a transição da animação)
+4° Windowns > Animation > Animator (fazer a transição da animação)
 
 	click na cameraAnimationIdle > Make Transition > Arrasta a seta ate CameraAnimationScreeenShake
 	click em Parameters > Trigger > nomei-e para shake 
 	click na seta da transição entre cameraAnimationIdle e CameraAnimationScreeenShake > 
 	click em "+" p/ adicionar o shake como condição> 0 em transition duration e desmaque a caixa Has Exit Time
 	
-7°  click na CameraAnimationScreeenShake > Make Transition > Arrasta a seta ate cameraAnimationIdle
+5°  click na CameraAnimationScreeenShake > Make Transition > Arrasta a seta ate cameraAnimationIdle
 
 	click na seta da transição entre cameraAnimationIdle e CameraAnimationScreeenShake >
 	zera o tempo transition duration e coloque 1 em Exit Time
 
-8° create new script "cameraAnimation" anexa na camera
+6° create new script "cameraAnimation" anexa na camera
 
 
     public class CameraAnitation : MonoBehaviour
@@ -412,7 +420,7 @@ Meta
     }
     }
 
-9° acessar o script Tagert responsavel por destruir a bomba e faça a referencia
+7° acessar o script Tagert responsavel por destruir a bomba e faça a referencia
 
 	public CameraAnitation camAnimator;
 
