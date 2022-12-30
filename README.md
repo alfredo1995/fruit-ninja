@@ -372,6 +372,8 @@ Meta
 	selecione o carva ui imagem > souce Image > arraste a textura da imagem importada
 	
 	
+<br>
+<br> 	
 	
 -------------------------------------------------- Screen Shake Animation ------------------------------------------------- 
 
