@@ -321,7 +321,6 @@ Use um parâmetro para alterar a dificuldade
         //chamar a class PlayerPrefs, setando o valor que esta no score
 
         scoreMaxText.text = "ScoreMax : " + PlayerPrefs.GetInt("scoreMax");
-
 	PlayerPrefs.SetInt("score", score);
 
 
