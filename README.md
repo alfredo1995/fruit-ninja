@@ -293,7 +293,7 @@ Use um parâmetro para alterar a dificuldade
 <br> 
 <br> 
 
-0) PlayerPrefs
+0° PlayerPrefs
 
 	PlayerPrefs é uma classe que armazena as preferências do jogador entre as sessões de jogo. 
 	Ele pode armazenar valores de string, float e inteiro no registro da plataforma do usuário.
