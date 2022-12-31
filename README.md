@@ -288,11 +288,15 @@ Use um parâmetro para alterar a dificuldade
 <br> 
 <br> 
 
---------------------------------------------------Salvando a pontuação do jogo -------------------------------------------------- 
+--------------------------------------------------  Salvando pontuação com PlayerPrefs -------------------------------------------------- 
 
 <br> 
 <br> 
 
+0) PlayerPrefs
+
+	PlayerPrefs é uma classe que armazena as preferências do jogador entre as sessões de jogo. 
+	Ele pode armazenar valores de string, float e inteiro no registro da plataforma do usuário.
 
 1° Criar um Canva de Text para Pontuacao Maxima
 
