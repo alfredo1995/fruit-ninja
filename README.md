@@ -466,8 +466,13 @@ Meta
 	Private AudioSource playerAudio;
 	public AudioClip clickSound;
 	public AudioClip bombSound;
+
+3) No metodo Start
+
+	PlayerAudio.GetComponent<AudioSource>();
+
 	
-3) No metodo onde está destruindo os objetos 
+4) No metodo onde está destruindo os objetos 
 
 	
 	private void OnMouseDown()
