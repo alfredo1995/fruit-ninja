@@ -452,19 +452,37 @@ Meta
 <br>
 <br>
 
--------------------------------------------------- Audio Sound Effects ------------------------------------------------- 
+-------------------------------------------------- Adicionar Audio Sound Effects ------------------------------------------------- 
 
-1) Selecione a Main Camera
+1) Selecione a Main Camera para adicionar som ambiente
 
 	Adicionar o componente > Audio Source 
 	Selecione um audio e arraste para a referencia desse componente > audio clip
 	
-2) Adcionar audio de effects 
-	
-	Selecione o obejto com script Game Manager(ou player) e adicione o componente > Audio Source
+2) Selecione o obejto com script target (frutas ou player) para som de efeito
+
+	adicione o componente > Audio Source
 	
 	Private AudioSource playerAudio;
 	public AudioClip clickSound;
 	public AudioClip bombSound;
 	
+3) No metodo onde está destruindo os objetos 
+
+	
+	private void OnMouseDown()
+        {
+            if (gameManager.isGameActive)
+            {
+               if (gameObject.CompareTag("Bad"))
+               {
+                   camAnimation.ScreenShake();
+               }
+
+               Destroy(gameObject);
+               Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+               gameManager.UpdateScore(pointValue);
+               playerAudio.PlayOneShot(clickSound, 1.0f);
+               playerAudio.PlayOneShot(bombSound, 1.0f);
+
 	
