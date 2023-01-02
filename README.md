@@ -449,5 +449,22 @@ Meta
 	}
 
 
+<br>
+<br>
 
+-------------------------------------------------- Audio Sound Effects ------------------------------------------------- 
 
+1) Selecione a Main Camera
+
+	Adicionar o componente > Audio Source 
+	Selecione um audio e arraste para a referencia desse componente > audio clip
+	
+2) Adcionar audio de effects 
+	
+	Selecione o obejto com script Game Manager(ou player) e adicione o componente > Audio Source
+	
+	Private AudioSource playerAudio;
+	public AudioClip clickSound;
+	public AudioClip bombSound;
+	
+	
