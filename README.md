@@ -477,12 +477,13 @@ Meta
                if (gameObject.CompareTag("Bad"))
                {
                    camAnimation.ScreenShake();
+		   playerAudio.PlayOneShot(bombSound, 1.0f);
+
                }
 
                Destroy(gameObject);
                Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
                gameManager.UpdateScore(pointValue);
                playerAudio.PlayOneShot(clickSound, 1.0f);
-               playerAudio.PlayOneShot(bombSound, 1.0f);
 
 	
