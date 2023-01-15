@@ -72,14 +72,14 @@ Crie o projeto e alterne para a visualização 2D
 Crie alvos bons e ruins
 
     1. NaBiblioteca, arraste 3 objetos "bons" e 1 objeto "ruim" para a Cena, renomeie-os como "Bom 1", "Bom 2", "Bom 3" e "Ruim 1"
-    2. Adicione os componentes Rigidbory e Box Collider, em seguida, certifique-se de que os Colliders rodeiam os objetos corretamente
-    3. Crie uma nova pasta Scripts, um novo script "Target.cs" dentro dela, anexe-o aosobjetos Target
+    2. Adicione os componentes Rigidbody e Box Collider, em seguida, certifique-se de que os Colliders rodeiam os objetos corretamente
+    3. Crie uma nova pasta Scripts, um novo script "Target.cs" dentro dela, anexe-o aos objetos Target
     4. Arraste todos os 4 destinos para apasta Prefabspara criar "pré-fabricados originais" e, em seguida, exclua-osda cena
 
 
 Jogue objetos aleatoriamente no ar
 
-    1. EmTarget.cs, declare um novoalvo privado de RigidbodyRb; e inicializá-lo emStart()
+    1. EmTarget.cs, declare um novo alvo privado de RigidbodyRb; e inicializá-lo emStart()
     2.EmStart(), adicione uma força ascendentemultiplicada por umavelocidade aleatória
     3. Adicionar umtorque com valores xyz aleatórios
     4. Defina aposiçãocom umvalor X aleatório
