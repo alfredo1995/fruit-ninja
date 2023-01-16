@@ -79,7 +79,7 @@ Crie alvos bons e ruins
 Jogue objetos aleatoriamente no ar
 
     1. EmTarget.cs, declare um novo alvo privado de RigidbodyRb; e inicializá-lo emStart()
-    2.EmStart(), adicione uma força ascendentemultiplicada por umavelocidade aleatória
+    2. EmStart(), adicione uma força ascendentemultiplicada por umavelocidade aleatória
     3. Adicionar umtorque com valores xyz aleatórios
     4. Defina aposiçãocom umvalor X aleatório
 
@@ -87,9 +87,9 @@ Jogue objetos aleatoriamente no ar
 Substitua o código confuso por novos métodos
 
     1. Declare e inicialize novas variáveis flutuantes privadas para minSpeed, maxSpeed, maxTorque, xRange eySpawnPos;
-    2.Crie uma nova função para Vector3 RandomForce() e chame-a em Start()
-    3.Crie uma nova função para float RandomTorque() e chame-a em Start()
-    4.Crie uma nova função para RandomSpawnPos(), faça com que ele retorne um novo Vector3e chame-o em Start() 
+    2. Crie uma nova função para Vector3 RandomForce() e chame-a em Start()
+    3. Crie uma nova função para float RandomTorque() e chame-a em Start()
+    4. Crie uma nova função para RandomSpawnPos(), faça com que ele retorne um novo Vector3e chame-o em Start() 
 
 
 Criar lista de objetos no Game Manager
@@ -103,14 +103,13 @@ Crie uma co-rotina para gerar objetos
 
     1. Declarar e inicializar uma nova variável spawnRate flutuante privada
     2. Criar um novo método IEnumerator SpawnTarget ()
-    3.Dentro do novo método, while (true),aguarde1 segundo, gere um índice aleatório e gere umdestino aleatório 
+    3. Dentro do novo método, while (true),aguarde1 segundo, gere um índice aleatório e gere umdestino aleatório 
     4. Em Start(), use o método StartCoroutinepara começar a gerar objetos
 
 
 Destrua o alvo com clique e sensor do Mouse
 
-    1. Em Target.cs, adicione um novo método parao vazio privado OnMouseDown() { }
-    e, dentro desse método, destrua o gameObject
+    1. Em Target.cs, adicione um novo método parao vazio privado OnMouseDown() { } e, dentro desse método, destrua o gameObject
     2. Adicione um novo método para o vazio privado OnTriggerEnter(Collider other) e, dentro dessa função, destrua o gameObject
 
 <br> 
@@ -140,15 +139,15 @@ Inicialize o texto e a variável da pontuação
     1. Na parte superior doGameManager.cs, adicione "usando TMPro; "
     2. Declare um novoscoreText TextMeshProUGUI público e, em seguida, atribua essa variável no inspetor
     3. Crie uma nova variável de pontuação int privadae inicialize-a emStart()asscore = 0;
-    4.Também emStart(), definascoreText.text = "Score: " + score;
+    4. Também emStart(), definascoreText.text = "Score: " + score;
 
 
 Criar um novo método UpdateScore
 
     1. Criar um novo método UpdateScore vazio privadoque exija umparâmetro int scoreToAdd
     2. Recortar e colarscoreText.text = "Score: " + score; no novo método e, em seguida, chameUpdateScore(0)emStart()
-    3.Em UpdateScore(), incremente a pontuação adicionandoscore += scoreToAdd;
-    4.Chame UpdateScore(5) na função spawnTarget()
+    3. Em UpdateScore(), incremente a pontuação adicionandoscore += scoreToAdd;
+    4. Chame UpdateScore(5) na função spawnTarget()
 
 
 Adicione pontuação quando os alvos forem destruídos referenciando os scripts
@@ -156,7 +155,7 @@ Adicione pontuação quando os alvos forem destruídos referenciando os scripts
     1. No GameManager.cs, torne o método UpdateScore público
     2. Em Target.cs, crie uma referência ao gameManager privado do GameManager //private GameManager gameManager;
     3. Inicialize o GameManager em Start()usando o método Find() //gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-    4.Quando um destino é destruído, chame UpdateScore(5); e, em seguida, excluaa chamada de método de SpawnTarget()
+    4. Quando um destino é destruído, chame UpdateScore(5); e, em seguida, excluaa chamada de método de SpawnTarget()
 
 
 Atribua um valor de ponto a cada destino
@@ -204,15 +203,15 @@ Criar função GameOver
 Pare de desovar e marque no GameOver
 
     1. Criar um novobool público isGameActive;
-    2.Como aprimeira linhaemStart(), definaisGameActive = true; e emGameOver(), definaisGameActive = false;
-    3.Para evitar a desova, na co-rotina SpawnTarget(), altere while (true) towhile(isGameActive)
-    4.Para evitar pontuação, em Target.cs, na função OnMouseDown(), adicione a condiçãoif (gameManager.isGameActive) {
+    2. Como aprimeira linhaemStart(), definaisGameActive = true; e emGameOver(), definaisGameActive = false;
+    3. Para evitar a desova, na co-rotina SpawnTarget(), altere while (true) towhile(isGameActive)
+    4. Para evitar pontuação, em Target.cs, na função OnMouseDown(), adicione a condiçãoif (gameManager.isGameActive) {
 
 
     Adicione um botão Reiniciar
 
-    1.Clique com o botão direito do mouse noCanvaseCriar > interface do usuário > BotãoNota: Você também pode 
-    usarButton - TextMeshPropara obter mais controle sobre o texto do botão.
+    1. Clique com o botão direito do mouse noCanvaseCriar > interface do usuário > BotãoNota: Você também pode 
+       usarButton - TextMeshPropara obter mais controle sobre o texto do botão.
     2. Renomeie o botão "Botão Iniciar"
     3. Reative temporariamente o texto do Game Over para reposicionar o Botão Reiniciar bem com o texto e, em seguida, desative-o novamente
     4. Selecione o objeto filho Texto e, em seguida, edite seu Texto para dizer "Reiniciar", sua Fonte, Estilo e Tamanho
@@ -220,14 +219,14 @@ Pare de desovar e marque no GameOver
 Faça o botão de reiniciar funcionar
 
     1. No GameManager.cs, adicioneusando UnityEngine.SceneManagement;
-    2.Criar uma nova função pública void RestartGame()que recarrega a cena atual
+    2. Criar uma nova função pública void RestartGame()que recarrega a cena atual
     3. No inspetor do botão, clique em + para adicionar um novoevento On Click, arraste-o no objeto Game Managere selecione afunção GameManager.RestartGame
 
 
 Mostrar botão de reinicialização no game over
 
     1. Na parte superior do GameManager.cs adicionarusando UnityEngine.UI;
-    2.Declare um novoButton restartButton público; e atribua obotão Reiniciara ele no inspetor
+    2. Declare um novoButton restartButton público; e atribua obotão Reiniciara ele no inspetor
     3. Desmarquea caixa de seleção "Ativo" dobotão Reiniciarno inspetor
     4. Na função GameOver, ative obotão Reiniciar
 
@@ -264,7 +263,7 @@ Faça seus botões iniciarem o jogo
 
     1. No GameManager.cs, crie uma nova função StartGame()void pública e mova tudo deStart()para ela
     2. Em DifficultyButton.cs, crie um novogameManager privado do GameManager; e inicializá-lo em Start() 
-    3.Na função SetDifficulty(), chamegameManager.StartGame();
+    3. Na função SetDifficulty(), chamegameManager.StartGame();
 
 
 Desative a tela de título no StartGame
@@ -279,8 +278,8 @@ Use um parâmetro para alterar a dificuldade
     1. Em DifficultyButton.cs, crie uma nova variável de dificuldade int pública e, em seguida, no Inspetor,
        atribua a dificuldade Easy como 1, Medium como 2 eHardas 3
     2. Adicionar um parâmetro de dificuldade intà função StartGame()
-    3.Em StartGame(), definaspawnRate /= dificuldade;
-    4.Corrija o erro em DifficultyButton.cs passando o parâmetro de dificuldade paraStartGame(difficulty)
+    3. Em StartGame(), definaspawnRate /= dificuldade;
+    4. Corrija o erro em DifficultyButton.cs passando o parâmetro de dificuldade paraStartGame(difficulty)
 
 
 
