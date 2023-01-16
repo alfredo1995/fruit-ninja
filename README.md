@@ -50,8 +50,6 @@ Esse projeto inclui todos esses fundamentos:
        
        atraves de um EventListener que será acionado ao clicar no botão;
 
-Definindo a dificuldade do jogo atraves da velocidade com que os alvos são lançados
-
 
 <br> 
 <br> 
