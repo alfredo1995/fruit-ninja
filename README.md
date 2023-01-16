@@ -95,15 +95,15 @@ Substitua o código confuso por novos métodos
 Criar lista de objetos no Game Manager
 
     1. Crie um novo objeto vazio do "Game Manager", anexe um novo script .cs GameManagere abra-o 
-    2. Declarar um novodestino público List<GameObject>; e, em seguida, no inspetor do Game Manager,
+    2. Declarar um novo destino público List<GameObject>; e, em seguida, no inspetor do Game Manager,
        altere o Tamanho da listapara 4 e atribua suaspré-fabricadas
 
 
 Crie uma co-rotina para gerar objetos
 
-    1. Declarar e inicializar uma novavariável spawnRate flutuante privada
+    1. Declarar e inicializar uma nova variável spawnRate flutuante privada
     2. Criar um novo método IEnumerator SpawnTarget ()
-    3.Dentro do novo método,while (true),aguarde1 segundo, gere um índice aleatório e gere umdestino aleatório 
+    3.Dentro do novo método, while (true),aguarde1 segundo, gere um índice aleatório e gere umdestino aleatório 
     4. Em Start(), use o método StartCoroutinepara começar a gerar objetos
 
 
@@ -123,7 +123,7 @@ Destrua o alvo com clique e sensor do Mouse
 
 Adicionar texto Pontuação posicioná-lo na tela
 
-    1. Na hierarquia, crie > interface do usuário > texto TextMeshPro e, se solicitado, clique no botão paraImportar TMP Essentials 
+    1. Na hierarquia, crie > interface do usuário > texto TextMeshPro e, se solicitado, clique no botão para Importar TMP Essentials 
     2. Renomeie o novo objeto "Texto de pontuação" ediminuao zoom para ver atelano modo de exibição Cena
     3. Altere oponto de ancoragempara que ele seja ancorado a partir docanto superior esquerdo
     4. No inspetor, altere seu Pos X ePos Ypara que ele fique no canto superior esquerdo
