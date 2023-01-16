@@ -473,20 +473,20 @@ Meta
 4) No metodo onde está destruindo os objetos 
 
 	
-	private void OnMouseDown()
-        {
-            if (gameManager.isGameActive)
-            {
-               if (gameObject.CompareTag("Bad"))
-               {
-                   camAnimation.ScreenShake();
-		   playerAudio.PlayOneShot(bombSound, 1.0f);
+		private void OnMouseDown()
+		{
+		    if (gameManager.isGameActive)
+		    {
+		       if (gameObject.CompareTag("Bad"))
+		       {
+			   camAnimation.ScreenShake();
+			   playerAudio.PlayOneShot(bombSound, 1.0f);
 
-               }
+		       }
 
-               Destroy(gameObject);
-               Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-               gameManager.UpdateScore(pointValue);
-               playerAudio.PlayOneShot(clickSound, 1.0f);
+		       Destroy(gameObject);
+		       Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+		       gameManager.UpdateScore(pointValue);
+		       playerAudio.PlayOneShot(clickSound, 1.0f);
 
 	
