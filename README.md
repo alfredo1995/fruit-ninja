@@ -497,7 +497,9 @@ Meta
 -------------------------------------------------- Adicionar Feedback sobre Ganho/Perda de itens ------------------------------------------------- 
 
 
-1) Criar um gameobjeto vazio contendo um componente Text Mesh Pro, organizado dentro da hierarquia do Carvas 
+1) 
+	
+	Criar um gameobjeto vazio contendo um componente Text Mesh Pro, organizado dentro da hierarquia do Carvas 
 	
 
 2) Criar uma variável referenciando o gameobjeto FloatingText contendo o componente Text Mesh Pro. 
