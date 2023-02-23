@@ -454,40 +454,41 @@ Meta
 
 1) Selecione a Main Camera para adicionar som ambiente
 
-	Adicionar o componente > Audio Source 
-	Selecione um audio e arraste para a referencia desse componente > audio clip
+	
+	   Adicionar o componente > Audio Source 
+	   Selecione um audio e arraste para a referencia desse componente > audio clip
 	
 2) Selecione o obejto com script target (frutas ou player) para som de efeito
 
-	adicione o componente > Audio Source
+	   adicione o componente > Audio Source
 	
-	Private AudioSource playerAudio;
-	public AudioClip clickSound;
-	public AudioClip bombSound;
+	   Private AudioSource playerAudio;
+	   public AudioClip clickSound;
+	   public AudioClip bombSound;
 
 3) No metodo Start
 
-	PlayerAudio.GetComponent<AudioSource>();
+	   PlayerAudio.GetComponent<AudioSource>();
 
 	
 4) No metodo onde está destruindo os objetos 
 
 	
-		private void OnMouseDown()
+	   private void OnMouseDown()
+	   {
+		if (gameManager.isGameActive)
 		{
-		    if (gameManager.isGameActive)
-		    {
-		       if (gameObject.CompareTag("Bad"))
-		       {
-			   camAnimation.ScreenShake();
-			   playerAudio.PlayOneShot(bombSound, 1.0f);
+		  if (gameObject.CompareTag("Bad"))
+		   {
+			camAnimation.ScreenShake();
+			playerAudio.PlayOneShot(bombSound, 1.0f);
 
-		       }
+		   }
 
-		       Destroy(gameObject);
-		       Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-		       gameManager.UpdateScore(pointValue);
-		       playerAudio.PlayOneShot(clickSound, 1.0f);
+		     Destroy(gameObject);
+		     Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+		     gameManager.UpdateScore(pointValue);
+		     playerAudio.PlayOneShot(clickSound, 1.0f);
 
 
 
@@ -498,25 +499,36 @@ Meta
 
 
 1) 
-	
-	Criar um gameobjeto vazio contendo um componente Text Mesh Pro, organizado dentro da hierarquia do Carvas 
+
+       Criar um gameobjeto vazio contendo um componente Text Mesh Pro, organizado dentro da hierarquia do Carvas 
 	
 
-2) Criar uma variável referenciando o gameobjeto FloatingText contendo o componente Text Mesh Pro. 
+2) 
 
+       Criar uma variável referenciando o gameobjeto FloatingText contendo o componente Text Mesh Pro. 
     
-3) Usado SerializeField para manipular a posição do Text Mesh Pro no editor, mas mantendo a class inacessível.  
+3) 
 
-4) acessar a classe responsavel por instanciar o valor da massa do objeto. 
+       Usado SerializeField para manipular a posição do Text Mesh Pro no editor, mas mantendo a class inacessível.  
 
-5) referenciar  a variável floatingText(gameObject) e ativando sua visibilidade na cena 
+4) 
+
+       acessar a classe responsavel por instanciar o valor da massa do objeto. 
+
+5) 
+
+       referenciar  a variável floatingText(gameObject) e ativando sua visibilidade na cena 
 
 
-6) referenciando a variável floatingText(gameObject), acessando seu componente Text e atribuindo o valor da massa do objeto recebido como parâmetro (Convertendo o valor inteiro recebido p/ string) 
+6) 
 
+       referenciando a variável floatingText(gameObject), acessando seu componente Text e atribuindo o valor da massa do objeto recebido 
+       como parâmetro (Convertendo o valor inteiro recebido p/ string) 
 
-7) Referenciando o Text (TMP) do gameobjeto vazio(FloatingText) no campo do inspetor da UI, correspondente ao script WeightCounter.cs no seu campo Floating Text.
+7)
 
+      Referenciando o Text (TMP) do gameobjeto vazio(FloatingText) no campo do inspetor da UI, correspondente ao 
+      script WeightCounter.cs no seu campo Floating Text.
 
 8) Valor da massa do objeto coletado sendo exibido na tela e o Posicionamento do texto podendo ser alterado no Inspetor. 
 
