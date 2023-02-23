@@ -489,4 +489,104 @@ Meta
 		       gameManager.UpdateScore(pointValue);
 		       playerAudio.PlayOneShot(clickSound, 1.0f);
 
-	
+
+
+<br>
+<br>
+
+-------------------------------------------------- Adicionar Feedback sobre Ganho/Perda de itens ------------------------------------------------- 
+
+
+1) Criado um gameobjeto vazio contendo um componente Text Mesh Pro, organizado dentro da hierarquia do Carvas 
+
+$19 
+
+O Canvas da UI contem o gameobjeto WeightCounter com o script WeightCounter responsável por instanciar o valor da massa do objeto coletados no Text Mesh Pro referente a exibição da pontuação. 
+
+$20 
+
+No script WeightCounter.cs, criado a variável referenciando o gameobjeto FloatingText contendo o componente Text Mesh Pro. 
+
+Usado SerializeField para manipular a posição do Text Mesh Pro no editor, mas mantendo a class inacessível.  
+
+$21 
+
+Método AddWeight responsável por instanciar o valor da massa do objeto coletado no sliderCharge (Exibi o valor coletado pelo funil) 
+
+referenciando a variável floatingText(gameObject) e ativando sua visibilidade na cena (antes de ser atribuído a massa do objeto coletado no sliderCharge )
+
+referenciando a variável floatingText(gameObject), acessando seu componente Text e atribuindo o valor da massa do objeto recebido como parâmetro (Convertendo o valor inteiro recebido p/ string) 
+
+
+$22 
+
+Referenciando o Text (TMP) do gameobjeto vazio(FloatingText) no campo do inspetor da UI, correspondente ao script WeightCounter.cs no seu campo Floating Text.
+
+$23  
+
+Valor da massa do objeto coletado sendo exibido na tela. 
+
+Posicionamento do texto podendo ser alterado no Inspetor. 
+
+
+$24 
+
+Usado as mesma configuração do Text Mesh pro "C_Weight"
+
+Disponível para alterações 
+
+$25 
+
+Classe DropTrash.cs responsável por limpar a lixeira contendo a massa dos GameObject coletados ao sai de um colisor de gatilho no método OnTriggerExit2D.
+
+responsável por deixar o player mais pesado ao coletar os lixo:
+
+WeightCounter.weight = 0;
+WeightCounter.sliderCharge.value = 0;
+
+Transferir os dois parâmetro acima para seu respectivo componente WeightCounter (UI). WeightCounter.cs 
+
+obs: Acessando o metodo TrashClean(LimparLixeira) que vai ser criado no script WeightCounter (_weightCounter.TrashClean();)
+
+$27 
+
+No componente da UI WeightCounter.cs. Criar um método ZerarLixeira recebendo o paramento para limpar a lixeira. 
+
+Obs: Transferido os 2 parâmetro do script DropTrash.cs responsável pela limpeza do contador da lixeira na regra de negocio de zerar o contador em WeightCounter.cs. 
+
+$28 
+
+Criado uma interface IEnumerator para definir o método FloatingTextPoupup responsável por ativar o Pop-up quando a coroutine for chamada na UI(No método AddWeight, onde está sendo atribuido a massa do objeto na UI)
+
+Adicionado um para para o rotina e continuar o fluxo do código após 5 segundos (0.5f);
+
+$29 
+
+Mostrando o valor total dos objetos coleto ao depositar o lixo na estação espacial de reciclagem. 
+
+$30 
+
+$31 
+
+Pegando a variável que está armazenado o valor total dos objetos coletados (accumulatedWeight). 
+
+Mostrando o resultado da quantidade de kg coletados, através do Text Mesh Pro(floatingText). 
+
+Posteriormente convertendo o valor inteiro recebido para string(ToString).
+
+
+$32 
+
+$33 
+
+Colocado o componente FloatingText dentro do player, para que o valor coletado apareça logo atrás do player (seguindo sua movimentação). Contribuindo com a sensação de ter coletado com sucesso. 
+
+$35 
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/71193893/221028051-d6b60441-6241-4572-a7af-d52904eb2917.png)
+
+
