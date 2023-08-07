@@ -16,7 +16,7 @@ Esse projeto inclui todos esses elementos de UI:
 
     No script GameManager tera o metoodo StartGame será tomado esse valor de dificuldade e
     usado para alterar o spawRate(Lançamento dos Alvos)
-    usando conceito de Ui Diegetic aplicando a animação "SCREEN SHAKE" 
+    usando conceito de Ui Diegetic aplicando a animação "SCREEN SHAKE"  
 
 Esse projeto inclui todos esses fundamentos: 
 
