@@ -12,7 +12,7 @@ Esse projeto inclui todos esses elementos de UI:
     Configuração hard faz com que os objetos sejam lançados rapidamente;
     Qunado o EventListener do botão for chamado vai executar o metodo SetDifficult;
     O metodo SetDifficult tomará o valor da difuldade e comunicar para o script GameManager,
-    responsavel por gerenciar a cena.
+    responsavel por gerenciar a cena. 
 
     No script GameManager tera o metoodo StartGame será tomado esse valor de dificuldade e
     usado para alterar o spawRate(Lançamento dos Alvos)
