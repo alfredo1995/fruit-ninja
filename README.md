@@ -30,7 +30,7 @@ Esse projeto inclui todos esses fundamentos:
 
        Os objetos serão destruido atraves da entrada do input do mouse
        
-       OnMouseEnter() para saber quando o mouse entra em uma área
+       OnMouseEnter() para saber quando o mouse entra em uma área 
 
        OnMouseDown() para dizer quando o mouse foi precionado para baixo
 
