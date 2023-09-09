@@ -21,7 +21,7 @@ Esse projeto inclui todos esses elementos de UI:
 Esse projeto inclui todos esses fundamentos: 
 
        Usei Random.Range
-
+ 
        Acessar a Position que será Randomizada para que os objetos apareçam em qualquer lugar.
 
        AddForce() onde a aplicação de força será aleatoria p/ q objetos voem ate alturas aleatoria.
