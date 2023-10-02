@@ -1,52 +1,51 @@
-Esse projeto inclui todos esses elementos de UI:
+This project includes all of these UI elements:
 
-    UI inclui qualquer texto, botoes ou exibir algo que o usuario consiga ler ou interagir
+     UI includes any text, buttons, or display that the user can read or interact with
 
-    Temos a Tela de titulo, com botoes de meunu onde o jogador pode escolher a dificuldade.
-    Durante o jogo, a Pontuação do jogador será rastreada e exibida.
-    No final tera um tela Game Over capaz de reiniciar o jogo.
+     We have the title screen, with menu buttons where the player can choose the difficulty.
+     During the game, the player's Score will be tracked and displayed.
+     At the end you will have a Game Over screen capable of restarting the game.
     
-    Ui de Menu de opções de dificuldade (easy, medium e hard);
-	
-    Configuração easy faz com que os objetos sejam lançados lentamente;
-    Configuração hard faz com que os objetos sejam lançados rapidamente;
-    Qunado o EventListener do botão for chamado vai executar o metodo SetDifficult;
-    O metodo SetDifficult tomará o valor da difuldade e comunicar para o script GameManager,
-    responsavel por gerenciar a cena. 
+     Menu UI with difficulty options (easy, medium and hard);
 
-    No script GameManager tera o metoodo StartGame será tomado esse valor de dificuldade e
-    usado para alterar o spawRate(Lançamento dos Alvos)
-    usando conceito de Ui Diegetic aplicando a animação "SCREEN SHAKE"  
+     Easy setting causes objects to be launched slowly;
+     Hard configuration causes objects to be launched quickly;
+     When the button's EventListener is called, it will execute the SetDifficult method;
+     The SetDifficult method will take the difficulty value and communicate it to the GameManager script,
+     responsible for managing the scene.
 
-Esse projeto inclui todos esses fundamentos: 
+     In the GameManager script, the StartGame method will take this difficulty value and
+     used to change the spawRate(Target Launch)
+     using Diegetic Ui concept applying "SCREEN SHAKE" animation
 
-       Usei Random.Range
+This project includes all these fundamentals:
+
+        I used Random.Range
  
-       Acessar a Position que será Randomizada para que os objetos apareçam em qualquer lugar.
+        Access the Position that will be Randomized so that the objects appear anywhere.
 
-       AddForce() onde a aplicação de força será aleatoria p/ q objetos voem ate alturas aleatoria.
+        AddForce() where the application of force will be random so that objects fly to random heights.
 
-       O giro ou Torque aplicados serão randomizados de modo que alguns objetos girem.
+        The Spin or Torque applied will be randomized so that some objects rotate.
 
-       Os objetos serão destruido atraves da entrada do input do mouse
+        Objects will be destroyed through mouse input
        
-       OnMouseEnter() para saber quando o mouse entra em uma área 
+        OnMouseEnter() to know when the mouse enters an area
 
-       OnMouseDown() para dizer quando o mouse foi precionado para baixo
+        OnMouseDown() to tell when the mouse has been pressed down
 
-       OnMouseUp() para dizer quando o mouse foi liberado
+        OnMouseUp() to tell when the mouse has been released
 
-       OnDestroy() Detectar se o usuario clicou no objeto para nos o destruimos
+        OnDestroy() Detect if the user clicked on the object so we can destroy it
 
-       Canvas representando a exibição da tela
+        Canvas representing the screen display
 
-       exibir a pontuação;
+        display the score;
        
-       texto de game over;
-	
-       Sistema de particulas;
-	
-       botão restart, escrevendo um metodo chamado RestatGame() que vai recarregar a cena,
-       
-       atraves de um EventListener que será acionado ao clicar no botão;
+        game over text;
 
+        Particle system;
+
+        restart button, writing a method called RestatGame() that will reload the scene,
+       
+        through an EventListener that will be triggered when clicking the button;
