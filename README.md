@@ -18,34 +18,6 @@ This project includes all of these UI elements:
      used to change the spawRate(Target Launch)
      using Diegetic Ui concept applying "SCREEN SHAKE" animation
 
-This project includes all these fundamentals:
 
-        I used Random.Range
- 
-        Access the Position that will be Randomized so that the objects appear anywhere.
+https://github.com/alfredo1995/click-fruit/assets/71193893/d833eb19-ff41-4dab-8cc2-46923075e9ef
 
-        AddForce() where the application of force will be random so that objects fly to random heights.
-
-        The Spin or Torque applied will be randomized so that some objects rotate.
-
-        Objects will be destroyed through mouse input
-       
-        OnMouseEnter() to know when the mouse enters an area
-
-        OnMouseDown() to tell when the mouse has been pressed down
-
-        OnMouseUp() to tell when the mouse has been released
-
-        OnDestroy() Detect if the user clicked on the object so we can destroy it
-
-        Canvas representing the screen display
-
-        display the score;
-       
-        game over text;
-
-        Particle system;
-
-        restart button, writing a method called RestatGame() that will reload the scene,
-       
-        through an EventListener that will be triggered when clicking the button;
