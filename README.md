@@ -18,6 +18,6 @@ This project includes all of these UI elements:
      used to change the spawRate(Target Launch)
      using Diegetic Ui concept applying "SCREEN SHAKE" animation
 
-
+ 
 https://github.com/alfredo1995/click-fruit/assets/71193893/d833eb19-ff41-4dab-8cc2-46923075e9ef
 
