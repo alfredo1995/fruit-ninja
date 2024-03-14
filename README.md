@@ -10,7 +10,7 @@ This project includes all of these UI elements:
 
      Easy setting causes objects to be launched slowly;
      Hard configuration causes objects to be launched quickly;
-     When the button's EventListener is called, it will execute the SetDifficult method;
+     When the button's EventListener is called, it will execute the SetDifficult method; 
      The SetDifficult method will take the difficulty value and communicate it to the GameManager script,
      responsible for managing the scene.
 
