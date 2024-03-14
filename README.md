@@ -6,7 +6,7 @@ This project includes all of these UI elements:
      During the game, the player's Score will be tracked and displayed.
      At the end you will have a Game Over screen capable of restarting the game.
     
-     Menu UI with difficulty options (easy, medium and hard);
+     Menu UI with difficulty options (easy, medium and hard); 
 
      Easy setting causes objects to be launched slowly;
      Hard configuration causes objects to be launched quickly;
