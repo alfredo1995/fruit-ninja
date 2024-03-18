@@ -163,8 +163,6 @@ Mostrar botão de reinicialização no game over
 
 
 
-
-
     
 #region  Escolher Dificuldades do Jogo 
 
@@ -244,43 +242,6 @@ Use um parâmetro para alterar a dificuldade
         PlayerPrefs.SetInt("score", score);
 
 #endregion
-
-
-
-#region Aplicando Conceito UI DIEGETIC 
-
-
-Diegético
-
-    As interfaces de usuário diegéticas existem no mundo do jogo em vez de estarem em cima dele e / ou completamente removidas da ficção do jogo.
-	Interfaces de usuário diegéticas dentro do mundo do jogo podem ser vistas e ouvidas por outros jogadores. Alguns exemplos de 
-    interface do usuário diegética incluem as telas em computadores, relógios de tique-taque, munição restante e contagens regressivas. 
-	
-Não-diegético
-
-	Interfaces não-diegéticas são aquelas que são renderizadas fora do mundo do jogo e são visíveis apenas para o jogador. 
-	Eles são suas interfaces de usuário de jogo típicas que se sobrepõem ao topo do jogo. Eles são completamente removidos da ficção do jogo. 
-	Alguns usos comuns de interfaces de usuário não diegéticas podem representar a saúde e a mana por meio de uma barra colorida.
-	
-Espacial
-
-	Os elementos espaciais da interface do usuário são apresentados fisicamente no espaço do jogo. 
-	Esses tipos de interfaces de usuário podem ou não ser visíveis para os outros jogadores dentro do espaço do jogo. 
-	Isso é algo que é particularmente apresentado em experiênciasde Realidade Virtual (VR). 
-	As interfaces de usuário espaciais são eficazes quando você deseja guiar os jogadores através de um nível ou indicar pontos de interesse.
-
-Meta
-
-	Meta UIs podem existir no mundo do jogo, mas não são necessariamente visualizadas como seriam como Spatial UIs.
-	Isso significa que eles podem não ser representados dentro do Espaço 3D. 
-	Na maioria dos casos, as Meta UIs representam um efeito de várias ações, como ser baleado ou exigir mais oxigênio. 
-	Quando o jogador está em uma área que não é adequada para eles, a visão através da máscara começa a ficar nebulosa. 
-	Quando eles são baleados ou se envolvem em combate, sua máscara também recebe dano. 
-
-#endregion
-
-
-
 
 
 
@@ -373,6 +334,8 @@ Meta
 #endregion
 
 
+
+
 #region Adicionar Audio Sound Effects 
 
 1) Selecione a Main Camera para adicionar som ambiente
@@ -411,6 +374,8 @@ Meta
     }
 
 #endregion
+
+
 
 
 #region Adicionar Feedback sobre Ganho / Perda de itens
