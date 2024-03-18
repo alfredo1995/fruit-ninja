@@ -1,3 +1,5 @@
+//MECANICA DO JOGO - PONTUAÇÃO - TELA DE GAME OVER - DIFICULDADE DO JOGO - SALVANDO PONTUAÇÃO COM PREFAB - SCREEN SHAKE - AUDIO SOUND - FEEDBACK GANHOS E PERDAS
+
 #region Mecânica Jogabilidade 
 
  Crie o projeto e alterne para a visualização 2D
@@ -52,7 +54,6 @@
 
 
 
-
 #region Mantendo a Pontuação  
 
 
@@ -101,8 +102,13 @@ Adicione uma explosão de partículas
     2. Para cada um dos pré-fabricados de destino, atribua umapartícula pré-fabricadada Biblioteca docurso > Partículasàvariável Partícula de explosão
     3. Na função OnMouseDown(), instancieuma nova explosão pré-fabricada
 
-#endregion
+Alterar o texto Score por uma imagem
 
+	1. create > ui imagem > apague o texto Score e posicione a imagem no lugar
+    2. Importe um imagem e defina a propriedade dela como > Texture Type > sprite (2D and UI)
+	3. selecione o carva ui imagem > souce Image > arraste a textura da imagem importada
+
+#endregion
 
 
 
@@ -161,9 +167,7 @@ Mostrar botão de reinicialização no game over
 
 
 
-
-
-    
+        
 #region  Escolher Dificuldades do Jogo 
 
 Criar texto do título e botões de menu
@@ -210,8 +214,6 @@ Use um parâmetro para alterar a dificuldade
 
 
 
-
-
 #region Salvando pontuação com PlayerPrefs
 
 0° PlayerPrefs
@@ -241,23 +243,6 @@ Use um parâmetro para alterar a dificuldade
         scoreMaxText.text = "ScoreMax : " + PlayerPrefs.GetInt("scoreMax");
         PlayerPrefs.SetInt("score", score);
 
-#endregion
-
-
-
-
-#region  Alterando o texto Score por uma Imagem 
-
-
-1° Alterar o texto Score por uma imagem
-
-	create > ui imagem > apague o texto Score e posicione a imagem no lugar
-
-2° Importe um imagem e defina a propriedade dela como > Texture Type > sprite (2D and UI)
-
-	selecione o carva ui imagem > souce Image > arraste a textura da imagem importada
-	
-	
 #endregion
 
 
@@ -336,6 +321,7 @@ Use um parâmetro para alterar a dificuldade
 
 
 
+
 #region Adicionar Audio Sound Effects 
 
 1) Selecione a Main Camera para adicionar som ambiente
@@ -374,6 +360,7 @@ Use um parâmetro para alterar a dificuldade
     }
 
 #endregion
+
 
 
 
