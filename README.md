@@ -18,15 +18,11 @@ This project includes all of these UI elements:
      used to change the spawRate(Target Launch)
      using Diegetic Ui concept applying "SCREEN SHAKE" animation
 
- 
+ <br>
 https://github.com/alfredo1995/click-fruit/assets/71193893/d833eb19-ff41-4dab-8cc2-46923075e9ef
+<br>
 
-
-//  MECANICA DO JOGO - PONTUAÇÃO - TELA DE GAME OVER - DIFICULDADE DO JOGO - SALVANDO PONTUAÇÃO COM PREFAB - SCREEN SHAKE - AUDIO SOUND - FEEDBACK GANHOS E PERDAS
-
-#region Mecânica Jogabilidade 
-
- Crie o projeto e alterne para a visualização 2D
+Crie o projeto e alterne para a visualização 2D
 
     1. Abra o Unity Hub e crie um projeto "Prototype 5" vazio no diretório do Unity. 
     2. Extraia a pasta compactada(Prototype 5 Starter Files) e, em seguida, importe o .unitypackage para o seu projeto. 
