@@ -1,7 +1,5 @@
 This project includes all of these UI elements:
 
-     UI includes any text, buttons, or display that the user can read or interact with
-
      We have the title screen, with menu buttons where the player can choose the difficulty.
      During the game, the player's Score will be tracked and displayed.
      At the end you will have a Game Over screen capable of restarting the game.
@@ -19,7 +17,12 @@ This project includes all of these UI elements:
      using Diegetic Ui concept applying "SCREEN SHAKE" animation
 
  <br>
-https://github.com/alfredo1995/click-fruit/assets/71193893/d833eb19-ff41-4dab-8cc2-46923075e9ef
+ 
+
+https://github.com/alfredo1995/click-fruit/assets/71193893/9a8d9b01-b9d9-48a6-8f9d-efb0425fd544
+
+
+
 <br>
 
 Crie o projeto e alterne para a visualização 2D
