@@ -17,13 +17,6 @@ This project includes all of these UI elements:
      using Diegetic Ui concept applying "SCREEN SHAKE" animation
 
  <br>
- 
-
-https://github.com/alfredo1995/click-fruit/assets/71193893/9a8d9b01-b9d9-48a6-8f9d-efb0425fd544
-
-
-
-<br>
 
 Crie o projeto e alterne para a visualização 2D
 
