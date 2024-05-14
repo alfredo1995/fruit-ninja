@@ -13,7 +13,7 @@ This project includes all of these UI elements:
      responsible for managing the scene.
 
      In the GameManager script, the StartGame method will take this difficulty value and
-     used to change the spawRate(Target Launch)
+     used to change the spawRate(Target Launch) 
      using Diegetic Ui concept applying "SCREEN SHAKE" animation
 
  <br>
