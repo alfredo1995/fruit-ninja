@@ -64,14 +64,6 @@ Crie o projeto e alterne para a visualização 2D
     1. Em Target.cs, adicione um novo método parao vazio privado OnMouseDown() { } e, dentro desse método, destrua o gameObject
     2. Adicione um novo método para o vazio privado OnTriggerEnter(Collider other) e, dentro dessa função, destrua o gameObject
 
-#endregion 
-
-
-
-
-
-#region Mantendo a Pontuação  
-
 
 Adicionar texto Pontuação posicioná-lo na tela
 
@@ -97,7 +89,7 @@ Criar um novo método UpdateScore
     1. Criar um novo método UpdateScore vazio privadoque exija umparâmetro int scoreToAdd
     2. Recortar e colarscoreText.text = "Score: " + score; no novo método e, em seguida, chameUpdateScore(0)emStart()
     3. Em UpdateScore(), incremente a pontuação adicionandoscore += scoreToAdd;
-4.Chame UpdateScore(5) na função spawnTarget()
+    4.Chame UpdateScore(5) na função spawnTarget()
 
 Adicione pontuação quando os alvos forem destruídos referenciando os scripts
 
@@ -121,18 +113,11 @@ Adicione uma explosão de partículas
 Alterar o texto Score por uma imagem
 
 	1. create > ui imagem > apague o texto Score e posicione a imagem no lugar
-    2. Importe um imagem e defina a propriedade dela como > Texture Type > sprite (2D and UI)
+        2. Importe um imagem e defina a propriedade dela como > Texture Type > sprite (2D and UI)
 	3. selecione o carva ui imagem > souce Image > arraste a textura da imagem importada
 
-#endregion
 
-
-
-
-
-#region Tela de Game Over  
-
-Criar um objeto de texto Game Over
+Criar uma tela de texto Game Over
 
     1. Clique com o botão direito do mouse noCanvas, crie uma novainterface do usuário >TextMeshPro - Objeto de textoe renomeie-o como "Game Over Text"
     2. No inspetor, edite seutexto, Pos X, Pos Y, Ativo de fonte, Tamanho, Estilo, Cor ealinhamento
@@ -178,15 +163,8 @@ Mostrar botão de reinicialização no game over
     3. Desmarquea caixa de seleção "Ativo" dobotão Reiniciarno inspetor
     4. Na função GameOver, ative obotão Reiniciar
 
-#endregion
-    
 
-
-
-        
-#region  Escolher Dificuldades do Jogo 
-
-Criar texto do título e botões de menu
+Criar texto do título e botões de menu (Escolher Dificuldades do Jogo )
 
     1. Duplique seu texto do Game Overpara criar seu Texto de Título, editando seu nome, texto e todos os seus atributos
     2. Duplique seu botão Reiniciare edite seus atributos para criar um botão "Botão Fácil"
@@ -224,18 +202,11 @@ Use um parâmetro para alterar a dificuldade
     3. Em StartGame(), definaspawnRate /= dificuldade;
     4.Corrija o erro em DifficultyButton.cs passando o parâmetro de dificuldade paraStartGame(difficulty)
 
-#endregion
 
+0°  Salvando pontuação com PlayerPrefs
 
-
-
-
-#region Salvando pontuação com PlayerPrefs
-
-0° PlayerPrefs
-
-	    PlayerPrefs é uma classe que armazena as preferências do jogador entre as sessões de jogo. 
-	    Ele pode armazenar valores de string, float e inteiro no registro da plataforma do usuário.
+	 PlayerPrefs é uma classe que armazena as preferências do jogador entre as sessões de jogo. 
+	 Ele pode armazenar valores de string, float e inteiro no registro da plataforma do usuário.
 
 1° Criar um Canva de Text para Pontuacao Maxima
 
@@ -248,7 +219,7 @@ Use um parâmetro para alterar a dificuldade
 
 3° metodo start: atribuir a variavel de contagem da pontuacao maxima o valor recebido na variavel score
         
-	     //criar um condicao para que mostre a pontuacao maxima se o score for maior que o valor na scoreMax
+	  //criar um condicao para que mostre a pontuacao maxima se o score for maior que o valor na scoreMax
          scoreMax = PlayerPrefs.GetInt("score");
          if (PlayerPrefs.GetInt("score") > PlayerPrefs.GetInt("scoreMax"))   {  PlayerPrefs.SetInt("scoreMax", scoreMax);    }
 
@@ -259,18 +230,10 @@ Use um parâmetro para alterar a dificuldade
         scoreMaxText.text = "ScoreMax : " + PlayerPrefs.GetInt("scoreMax");
         PlayerPrefs.SetInt("score", score);
 
-#endregion
 
+1) Tremer a Tela ao clicar na bomba "screen shake"
 
-
-
-	
-#region Screen Shake Animation 
-
-
-1) Fazer com que a tela trema ao clicar na bomba "screen shake"
-
-	Adicionar um componente animator na camera e em seguida > windows > animation > abrir
+       Adicionar um componente animator na camera e em seguida > windows > animation > abrir
 
 2° Windowns > Animation > Create new clip > dar o nome ao arquivo e salva (cameraAnimationIdle)
 
@@ -332,26 +295,19 @@ Use um parâmetro para alterar a dificuldade
      }    }
 
 
-#endregion
 
-
-
-
-
-#region Adicionar Audio Sound Effects 
-
-1) Selecione a Main Camera para adicionar som ambiente
+1) Selecione a Main Camera para adicionar som ambiente (Audio Sound Effects)
 	
-    Adicionar o componente > Audio Source 
-    Selecione um audio e arraste para a referencia desse componente > audio clip
+       Adicionar o componente > Audio Source 
+       Selecione um audio e arraste para a referencia desse componente > audio clip
 	
 2) Selecione o obejto com script target (frutas ou player) para som de efeito
 
-    adicione o componente > Audio Source
+       adicione o componente > Audio Source
 	
-    Private AudioSource playerAudio;
-    public AudioClip clickSound;
-    public AudioClip bombSound;
+       Private AudioSource playerAudio;
+       public AudioClip clickSound;
+       public AudioClip bombSound;
 
 3) No metodo Start
 
@@ -359,81 +315,81 @@ Use um parâmetro para alterar a dificuldade
 
 4) No metodo onde está destruindo os objetos 
 
-    private void OnMouseDown()
-    {
-        if (gameManager.isGameActive)
-        {
-         if (gameObject.CompareTag("Bad"))
-         {
-            camAnimator.ScreenShake();
-
-         }
+       private void OnMouseDown()
+       {
+            if (gameManager.isGameActive)
+           {
+            if (gameObject.CompareTag("Bad"))
+           {
+             camAnimator.ScreenShake();
+          }
 
           Destroy(gameObject);
           Instantiate(explosionParticle, transform.position, transform.rotation);
           gameManager.UpdateScore(pointValue);
         }
-    }
-
-#endregion
+       }
 
 
-
-
-
-#region Adicionar Feedback sobre Ganho / Perda de itens
+Adicionar Feedback sobre Ganho / Perda de itens
 
 
 1) 
-    Criar um gameobjeto vazio contendo um componente Text Mesh Pro, organizado dentro da hierarquia do Carvas
 
-2)
-    Criar uma variável referenciando o gameobjeto FloatingText contendo o componente Text Mesh Pro.
+   	   Criar um gameobjeto vazio contendo um componente Text Mesh Pro, organizado dentro da hierarquia do Carvas
 
-3) 
-    Usado SerializeField para manipular a posição do Text Mesh Pro no editor, mas mantendo a class inacessível.  
-4) 
-    acessar a classe responsavel por instanciar o valor da massa do objeto. 
+3)
+
+  	  Criar uma variável referenciando o gameobjeto FloatingText contendo o componente Text Mesh Pro.
+
 5) 
-    referenciar  a variável floatingText(gameObject) e ativando sua visibilidade na cena 
 
-6) 
-    referenciando a variável floatingText(gameObject), acessando seu componente Text e atribuindo o valor da massa do objeto recebido 
-    como parâmetro (Convertendo o valor inteiro recebido p/ string) 
-7)
-    Referenciando o Text (TMP) do gameobjeto vazio(FloatingText) no campo do inspetor da UI, correspondente ao 
-    script WeightCounter.cs no seu campo Floating Text.
+   	   Usado SerializeField para manipular a posição do Text Mesh Pro no editor, mas mantendo a class inacessível.  
+7) 
 
-8) Valor da massa do objeto coletado sendo exibido na tela e o Posicionamento do texto podendo ser alterado no Inspetor. 
+          acessar a classe responsavel por instanciar o valor da massa do objeto. 
+9) 
 
-    [SerializeField]
-    private TextMeshProUGUI floatingText;
+         referenciar  a variável floatingText(gameObject) e ativando sua visibilidade na cena 
 
-    public void AdicionarMassaExemplo(float mass)
-    {
-     floatingText.gameObject.SetActive(true);
-     sliderTextMP.value += mass;
-     floatingText.text = mass.ToString();
+11) 
 
-     StartCoroutine(FloatingTextPopup());
-    }
+        referenciando a variável floatingText(gameObject), acessando seu componente Text e atribuindo o valor da massa do objeto recebido 
+        como parâmetro (Convertendo o valor inteiro recebido p/ string) 
+13)
 
-    IEnumerator FloatingTextPopup()
-    {
-     yield return new WaitForSeconds(0.5f);
-     floatingText.gameObject.SetActive(false);
-     floatingText.text = accumulatedWeight.ToString();
-    }
+       Referenciando o Text (TMP) do gameobjeto vazio(FloatingText) no campo do inspetor da UI, correspondente ao 
+       script WeightCounter.cs no seu campo Floating Text.
 
-    public void TrashClean()
-    {
-     weight = 0;
-     sliderTextMP.value = 0;
+15) Valor da massa do objeto coletado sendo exibido na tela e o Posicionamento do texto podendo ser alterado no Inspetor. 
 
-     floatingText.gameObject.SetActive(true);
-     StartCoroutine(FloatingTextPopup());
-    }
+        [SerializeField]
+        private TextMeshProUGUI floatingText;
 
-#endregion
+        public void AdicionarMassaExemplo(float mass)
+        {
+        floatingText.gameObject.SetActive(true);
+        sliderTextMP.value += mass;
+        floatingText.text = mass.ToString();
+
+        StartCoroutine(FloatingTextPopup());
+        }
+
+        IEnumerator FloatingTextPopup()
+        {
+         yield return new WaitForSeconds(0.5f);
+        floatingText.gameObject.SetActive(false);
+        floatingText.text = accumulatedWeight.ToString();
+        }
+
+        public void TrashClean()
+        {
+        weight = 0;
+        sliderTextMP.value = 0;
+
+        floatingText.gameObject.SetActive(true);
+        StartCoroutine(FloatingTextPopup());
+        }
+
 
 
