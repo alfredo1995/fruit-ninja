@@ -11,7 +11,7 @@ This project includes all of these UI elements:
      When the button's EventListener is called, it will execute the SetDifficult method; 
      The SetDifficult method will take the difficulty value and communicate it to the GameManager script,
      responsible for managing the scene.
-
+ 
      In the GameManager script, the StartGame method will take this difficulty value and
      used to change the spawRate(Target Launch) 
      using Diegetic Ui concept applying "SCREEN SHAKE" animation
